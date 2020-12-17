@@ -1,4 +1,4 @@
-ROM ubuntu:18.04
+ROM ubuntu:20.04
 
 MAINTAINER Plasmaman916, <plasma@voidpvp.net>
 
@@ -13,3 +13,5 @@ WORKDIR /home/container
 COPY ./entrypoint.sh /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
+
+#test
