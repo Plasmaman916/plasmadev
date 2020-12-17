@@ -4,8 +4,9 @@ MAINTAINER Plasmaman916, <plasma@voidpvp.net>
 
 RUN apt update
 
-ADD tzdata.sh /tzdata.sh
-RUN /tzdata.sh
+COPY ./tzdata.sh /tzdata.sh
+
+CMD ["/bin/bash", "/tzdata.sh"]
 
 RUN apt -y install openjdk-11-jre curl ca-certificates openssl git tar bash sqlite fontconfig \
     && adduser -D -h /home/container container
